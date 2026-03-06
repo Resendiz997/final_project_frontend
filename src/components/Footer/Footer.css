@@ -1,0 +1,24 @@
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    margin: 112px 104px 26px;
+}
+.footer__copyright{
+    color: rgba(182, 188, 191, 1);
+    font-family: 'Roboto', cursive;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer__link{
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto',cursive;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(26, 27, 34, 1);
+}
+.footer__buttons{
+    display: flex;
+    column-gap: 40px;
+
+}

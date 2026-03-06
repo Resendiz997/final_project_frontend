@@ -1,0 +1,22 @@
+.saved__article-top{
+    height: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 40px 0 28px 104px;
+    color: rgba(26, 27, 34, 0.5);
+    font-family: 'Roboto', cursive;
+}
+.saved__article-title{
+    margin: 28px 0 40px 104px;
+    font-weight: 400;
+    font-size: 40px;
+    width: 530px;
+    height: 92px;
+    font-family: 'Roboto Slab', cursive;
+}
+.saved__article-keywords{
+    margin: 0 0 56px 104px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', cursive;
+}

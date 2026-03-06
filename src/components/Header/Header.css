@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../../vendor/roboto-slab-400-regular.woff);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../vendor/roboto-400-regular.woff);
+}
+
+
+
+.header__sign_in{
+    margin-right: 104px;
+    border-radius: 100px;
+    padding: 12px;
+    height: 48px;
+    width: 176px;
+    margin-top: 31px;
+    border-color:white;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto',cursive;
+    color: rgba(255, 255, 255, 1);
+}
+.header__buttons{
+    display: flex;
+    justify-content: end;
+    align-items: anchor-center;
+}
+.header__home{
+    border: none;
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Roboto',cursive;
+    margin-right: 42px; 
+}
+.header__section{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 13px;
+}
+.header__title{
+    display: flex;
+    align-items: center;
+    margin-left: 104px;
+    margin-top: 31px;
+    font-size: 24px;
+    font-weight: 700;
+    color:rgba(255, 255, 255, 1);
+    font-family: 'Roboto Slab', cursive;
+}
+.header__saved-articles{
+    border: none;
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin-left:76px;
+    margin-right: 64px;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+}
+.header__user-btn{
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+    border-color: rgba(255, 255, 255, 1);
+    border-radius: 100px;
+    width: 112px;
+    background-image: url(../../images/logout.png);
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-evenly;
+    margin-right: 104px;
+}
+.header__home-profile{
+    border: none;
+    background: none;
+    margin-top: 31px;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Roboto',cursive;
+}
+.header__title-profile{
+    color: black;
+}
+.header__saved-articles-profile{
+    color: black;
+}
+.header__user-btn-profile{
+    color: black;
+    border-color: black;
+    background-image: url(../../images/logout-black.png);
+}
+@media(max-width: 1000px){
+    .header__buttons{
+        
+    }
+}
