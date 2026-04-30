@@ -39,10 +39,14 @@
     font-family: 'Roboto',cursive;
     margin-right: 42px; 
 }
+.header__home.active{ 
+    border-bottom-width: 6px;
+}
 .header__section{
     display: flex;
     justify-content: space-between;
     padding-bottom: 13px;
+    border-bottom: groove;
 }
 .header__title{
     display: flex;
@@ -81,10 +85,12 @@
     background-position: right;
     display: flex;
     align-items: center;
-    text-decoration: none;
     justify-content: space-evenly;
     margin-right: 104px;
 }
+.header__oscar{
+    text-decoration: none;
+  }
 .header__home-profile{
     border: none;
     background: none;
@@ -104,9 +110,73 @@
     color: black;
     border-color: black;
     background-image: url(../../images/logout-black.png);
+    text-decoration: none;
 }
-@media(max-width: 1000px){
+
     .header__buttons{
         
     }
+    
+.header__home_active{
+    text-decoration:underline;
+    text-underline-offset: 30px;
+    border: none;
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Roboto',cursive;
+    margin-right: 42px; 
+}
+.header__profile_active{
+    border: none;
+    text-decoration:underline;
+    text-underline-offset: 30px;
+    background: none;
+    margin-top: 31px;
+    color: black;
+    font-weight: 500;
+    margin-left:76px;
+    margin-right: 64px;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+}
+.header__profile_inactive{
+    border: none;
+    text-decoration: none;
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin-left:76px;
+    margin-right: 64px;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+}
+.header__home_inactive{
+    border: none;
+    text-decoration: none;
+    background: none;
+    margin-top: 31px;
+    color: black;
+    font-weight: 500;
+    margin-left:76px;
+    margin-right: 64px;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+}
+.header__link_active{
+    border: none;
+    text-decoration:underline;
+    text-underline-offset: 30px;
+    background: none;
+    margin-top: 31px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin-left:76px;
+    margin-right: 64px;
+    font-size: 18px;
+    font-family: 'Roboto', cursive;
+
 }

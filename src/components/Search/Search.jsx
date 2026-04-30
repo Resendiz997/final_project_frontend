@@ -12,6 +12,7 @@ function Search({handleSearchRequest}) {
         const handleSearchSubmit = (e) => {
             e.preventDefault();
             handleSearchRequest({keyword : searchData.keyword});
+            console.log({keyword : searchData.keyword})
           }
 
     const handleSearchChange = (e) => {

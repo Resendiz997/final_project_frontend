@@ -7,15 +7,14 @@
 .article__container{
     background-color: rgba(255, 255, 255, 1);
     border-radius: 16px;
-    /* height: 576px; */
     width: 400px;
-    margin-top: 64px;
-    margin-left: 16px;
+    margin-top: 32px;
+    margin-left: 40px;
+    margin-bottom: 32px;
     position: relative;
 }
 .article__title{
     width: 354px;
-    /* height: 60px; */
     font-family: 'Roboto Slab';
     font-weight: 400;
     line-height: 30px;
@@ -64,12 +63,16 @@
     border: none;
     border-radius: 8px;
     margin-top: 24px;
-    margin-left: 336px;
+    margin-left: 330px;
     background-color: rgba(255, 255, 255, 1);
 }
+.article__save-btn_checked{
+    background-image: url(../../images/save-btn-checked.png);
+}
 .article__sign-in{
-    width: 182px;
+    width: 170px;
     height: 40px;
+    font-size: 12px;
     padding: 11px 20px;
     position: absolute;
     border: none;
@@ -80,13 +83,41 @@
     margin-top: 25px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.9s ease;
 }
 .article__container:hover .article__sign-in {
     opacity: 1;
     pointer-events: auto;
   }
-  .article__save-btn:hover{
+  .article__save-btn:not(.article__save-btn_checked):not(.article__delete-btn):hover{
     background-image: url(../../images/bookmark-2.png);
-
-  }
+}
+.article__delete-btn{
+    background-image: url(../../images/delete-btn.png);
+}
+.article__keyword-profile{
+    color: black;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    width: 87px;
+    height: 40px;
+    align-items: anchor-center;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    margin-left: 24px;
+    margin-top: 24px;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+}
+.article__keyword{
+    position: absolute;
+    opacity: 0;
+}
+.article__sign-in_profile{
+    font-size: 14px;
+    margin-left: 155px;
+}

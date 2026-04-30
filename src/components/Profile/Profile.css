@@ -15,8 +15,22 @@
     font-family: 'Roboto Slab', cursive;
 }
 .saved__article-keywords{
-    margin: 0 0 56px 104px;
+    margin: 0 0 104px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Roboto', cursive;
+}
+.saved__article{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(245, 246, 247, 1);
+}
+.saved__article-prompt{
+    display: flex;
+    margin-left: 104px;
     font-size: 18px;
     font-weight: 400;
     font-family: 'Roboto', cursive;
+    gap: 5px;
+
 }

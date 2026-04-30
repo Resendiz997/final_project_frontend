@@ -12,6 +12,8 @@ import Profile from "../Profile/Profile";
 import Results from "../Results/Results";
 import SuccessModal from "../SuccessModal/SuccessModal";
 import CurrentUserContext from "../../context/currentUserContext";
+import Loader from "../Loader/Loader";
+import ErrorLoader from "../ErrorLoader/ErrorLoader";
 
 import { authorize, register } from "../../utils/auth";
 
@@ -21,9 +23,10 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [stayLoggedIn, setStayLoggedIn] = useState(false);
   const [articles, setArticles] = useState([]);
-  const [currentUser, setCurrentUser] = useState({});
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(undefined);
   const [savedArticle, setSavedArticle] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const closeActiveModal = () => {
     console.log("closeActiveModal called, current activeModal:", activeModal);
@@ -62,10 +65,8 @@ function App() {
       const response = await authorize({ email, password });
       localStorage.setItem("token", response.token);
       setStayLoggedIn(true);
-      setIsLoggedIn(true);
       console.log(formData);
       setCurrentUser(formData);
-      console.log(currentUser);
       closeActiveModal();
     } catch (error) {
       console.error(error);
@@ -74,30 +75,57 @@ function App() {
   };
 
   const handleSearchRequest = ({ keyword }) => {
+    setLoading(true);
+    setHasSearched(true);
     searchArticles({ keyword })
       .then((res) => {
         console.log(res.articles);
-        setArticles(res.articles);
+        setArticles(
+          res.articles.map((articleData) => ({
+            article: articleData,
+            keyword,
+          }))
+        );
       })
       .catch((err) => {
         console.error(err);
         alert("Search result not found");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
-  const handleSave = (article) => {
+  const handleSave = ({ article: articleData, keyword: searchData }) => {
     setSavedArticle((prev) => {
-      const exists = prev.some((item) => item.id === article.id);
-
+      const exists = prev.some(
+        (item) =>
+          item.article.author === articleData.author &&
+          item.article.title === articleData.title
+      );
       if (exists) {
-        return prev.filter((item) => item.id !== article.id);
+        return prev.filter(
+          (item) =>
+            item.article.author !== articleData.author &&
+            item.article.title !== articleData.title
+        );
       } else {
-        return [...prev, article];
+        return [...prev, { article: articleData, keyword: searchData }];
       }
     });
-    console.log(article);
-    console.log("saving article", savedArticle)
   };
+
+  const handleDelete = (article) => {
+    setSavedArticle((prev) => {
+      return prev.filter(
+        (item) =>
+          item.article.author !== article.author &&
+          item.article.title !== article.title
+      );
+    });
+  };
+
+  const loggedIn = currentUser !== undefined;
 
   const location = useLocation();
   const isProfilePage = location.pathname === "/profile";
@@ -109,7 +137,6 @@ function App() {
           <Header
             isProfilePage={isProfilePage}
             HandleSignInClick={HandleSignInClick}
-            isLoggedIn={isLoggedIn}
             handleSignOut={handleSignOut}
           />
           <Routes>
@@ -118,21 +145,36 @@ function App() {
               element={
                 <>
                   <Search handleSearchRequest={handleSearchRequest} />
-                  {articles.length !== 0 ? (
+                  {loading ? (
+                    <>
+                      <Loader />
+                    </>
+                  ) : hasSearched && articles.length === 0 ? (
+                    <ErrorLoader />
+                  ) : hasSearched && articles.length !== undefined ? (
                     <Results
+                      loggedIn={loggedIn}
+                      currentUser={currentUser}
                       handleSave={handleSave}
                       HandleSignInClick={HandleSignInClick}
                       articles={articles}
+                      savedArticle={savedArticle}
+                      handleDelete={handleDelete}
                     />
-                  ) : (
-                    <About />
-                  )}
+                  ) : null}
+                  <About />
                 </>
               }
             />
             <Route
               path="/profile"
-              element={<Profile savedArticle={savedArticle} />}
+              element={
+                <Profile
+                  savedArticle={savedArticle}
+                  isProfilePage={isProfilePage}
+                  handleDelete={handleDelete}
+                />
+              }
             />
           </Routes>
           <SignIn

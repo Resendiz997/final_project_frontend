@@ -52,10 +52,10 @@
     border-radius: 50px;
     position: absolute;
     left: 870px;
-    height: 64px;
+    height: 68px;
+    bottom:252px;
     width: 168px;
     background-color: rgba(47, 113, 229, 1);
-    bottom: 316px;
     font-family: 'Roboto', cursive;
     color: rgba(255, 255, 255, 1);
     font-weight: 500;

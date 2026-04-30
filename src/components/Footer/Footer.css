@@ -1,7 +1,7 @@
 .footer__content{
     display: flex;
     justify-content: space-between;
-    margin: 112px 104px 26px;
+    margin: 64px 104px 26px;
 }
 .footer__copyright{
     color: rgba(182, 188, 191, 1);
