@@ -26,7 +26,7 @@ function Header({ HandleSignInClick, handleSignOut, isProfilePage }) {
               Home
             </NavLink>
             <NavLink
-              to="/profile"
+              to="/saved-news"
               className={({ isActive }) =>
                 isActive ? "header__profile_active" : "header__profile_inactive"
               }

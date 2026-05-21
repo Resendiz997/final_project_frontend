@@ -128,7 +128,7 @@ function App() {
   const loggedIn = currentUser !== undefined;
 
   const location = useLocation();
-  const isProfilePage = location.pathname === "/profile";
+  const isProfilePage = location.pathname === "/saved-news";
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -167,7 +167,7 @@ function App() {
               }
             />
             <Route
-              path="/profile"
+              path="/saved-news"
               element={
                 <Profile
                   savedArticle={savedArticle}

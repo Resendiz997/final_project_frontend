@@ -3,7 +3,6 @@ import CurrentUserContext from "../../context/currentUserContext";
 
 import "./Profile.css";
 import Article from "../Article/Article";
-import { searchArticles } from "../../utils/api";
 
 function Profile({ savedArticle, isProfilePage, handleDelete }) {
   const currentUser = useContext(CurrentUserContext);
@@ -19,7 +18,6 @@ function Profile({ savedArticle, isProfilePage, handleDelete }) {
         {" "}
         By Keywords:{" "}
         <span className="saved__article-keywords">
-          {/* {[...new Set(savedArticle.map((item) => item.keyword))].slice(0,3).join(", ")+ `${item.keyword.length -3} more`} */}
           {((keyword) =>
             keyword.slice(0, 3).join(", ") +
             (keyword.length > 3 ? ` +${keyword.length - 3} more` : ""))([
