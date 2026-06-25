@@ -1,50 +1,39 @@
-# Pump2Easy: Front end : React
-The front-end project for Pump2Easy is focused on building the user interface for the application — the part users interact with in their browser. This website is designed to create randomized workout plans based on the criteria entered or have the ability to build your own workouts. This website will be interactive with the user with the adddition of buttons, drop down menus, and personalized plans. Personal profiles will be required to access certain parts of the website as well as validiation will be visable throughout the application. 
+# GitHub page link 
+* https://resendiz997.github.io/final_project_frontend/
 
 
-The end goal is to create a functional, user-friendly interface that communicates with a backend API to display and manage workouts created by the user. 
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Tools and Functions Used
-This project helps you deepen your understanding of:
+Currently, two official plugins are available:
 
-React and component-based design
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Managing state and props
+# Project Pitch Video
 
-Making API calls to the backend server
+# News API project stage 1
 
-Handling user authentication and session storage on the client side
+## Link
 
-Creating a smooth user experience with forms, modals, and conditional rendering
+https://drive.google.com/file/d/1K3wpVE2J2NJbrgVy74_rho7TzpkV7SY_/view?usp=sharing
 
-Applying styles using CSS or CSS-in-JS.
+## Introduction
 
-User validation and authorization. 
+This project is a keyword-driven news discovery platform designed to deliver relevant, up-to-date articles based on user searches. By integrating with a News API, the application allows users to quickly find news stories related to specific topics, making it a simple and efficient tool for staying informed.
 
-Proper funneling of errors.
+The overview video will highlight how the platform works—from entering a keyword to retrieving curated news results—along with the overall value it provides to users. The video serves as a quick, engaging overview for anyone interested in the concept or functionality.
 
+## Features
 
+- Keyword-based news search powered by a News API
+- Dynamic retrieval of relevant articles
+- User authentication with sign-up and sign-in functionality
+- Clean and intuitive interface for browsing results
 
-## # Pump2Easy : Back End : Express 
+## Purpose
 
-## Tech stack and tools
+The goal of this project is to demonstrate how external APIs can be leveraged to build a responsive, user-focused application. It also showcases basic authentication workflows, allowing users to create accounts and personalize their experience.
 
-The stck used for this project include : 
-~ MongoDB, as our database  
-~ Postman, to test, debug, and document our API.
-
-Switching over to the back-end side of our WTWR project a couplel diffrent tools where used to crate this back-end. Starting off with the set up of ESLint in the Airbnb style, allowing us to maintain clean, consistant, and easy to understand code. Using Mongoos as our priamry database collection for our items. The introduction of schemas an dpassign them properly to create the validation as well as error handleing . 
-
-
-## Running the Project
-`npm run start` — to launch the server 
-
-`npm run dev` — to launch the server with the hot reload feature
-
-
- ## Backend Link : 
-
-
-
-# final_project_frontend
+By combining real-time data retrieval with a simple user system, this project provides a practical example of building a modern web application that is both functional and easy to present through a concise pitch video.

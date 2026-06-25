@@ -1,0 +1,46 @@
+.about__image{
+    height: 464px;
+    width: 464px;
+    margin-left: 104px;
+    margin-top: 80px;
+}
+.about__info{
+    display: flex;
+    justify-self: end;
+    flex-direction: column;
+    margin: 151px 216px 0 56px;
+}
+.about__content{
+    display: flex;
+    gap: 56px;
+}
+.about__header{
+    font-family: 'Roboto Slab', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: rgba(26, 27, 34, 1);
+}
+.about__description{
+    font-family: 'Roboto', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(26, 27, 34, 1);
+}
+
+@media(max-width:1120px){
+    .about__info{
+        margin: 10px 300px;
+    }
+    .about__content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__header{
+        align-self: center;
+    }
+}
+@media(max-width:955px){
+    .about__header{
+        text-align: center;
+    }
+}
