@@ -11,8 +11,7 @@ function Profile({ savedArticle, isProfilePage, handleDelete }) {
     <div className="saved__article-header">
       <div className="saved__article-top">Saved articles</div>
       <h1 className="saved__article-title">
-        {" "}
-        Elise, you have 5 saved articles{" "}
+         Elise, you have {savedArticle.length} saved articles
       </h1>
       <div className="saved__article-prompt">
         {" "}

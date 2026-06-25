@@ -26,3 +26,21 @@
     font-weight: 400;
     color: rgba(26, 27, 34, 1);
 }
+
+@media(max-width:1120px){
+    .about__info{
+        margin: 10px 300px;
+    }
+    .about__content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__header{
+        align-self: center;
+    }
+}
+@media(max-width:955px){
+    .about__header{
+        text-align: center;
+    }
+}

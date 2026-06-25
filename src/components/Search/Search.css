@@ -44,6 +44,7 @@
     color: rgba(182, 188, 191, 1);
     border: 1px;
     padding-left: 24px;
+    position: relative;
 }
 .search__bar:focus{
     outline: none;
@@ -53,7 +54,7 @@
     position: absolute;
     left: 870px;
     height: 68px;
-    bottom:192px;
+    bottom:309px;
     width: 168px;
     background-color: rgba(47, 113, 229, 1);
     font-family: 'Roboto', cursive;
@@ -67,7 +68,7 @@
         align-items: center;
     }
     .search__button{
-        left: 686px;
+        left: 690px;
     }
 }
 
@@ -92,3 +93,9 @@
         left: 629px;
     }
 }
+@media(max-width:830px){
+        .search__button{
+            bottom: 297px;
+            left: 630px;
+        }
+    }

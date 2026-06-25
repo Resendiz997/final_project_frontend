@@ -40,4 +40,15 @@
     .results__more-btn{
     margin-left: 180px;
     }
+    .results_section{
+        justify-content: center;
+    }
+}   
+
+@media(max-width:1015px){
+    .results__header{
+        text-align: center;
+        margin-left: 200px;
+    }
+    .results__section{justify-content: center;}
 }

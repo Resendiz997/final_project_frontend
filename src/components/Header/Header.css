@@ -112,11 +112,6 @@
     background-image: url(../../images/logout-black.png);
     text-decoration: none;
 }
-
-    .header__buttons{
-        
-    }
-    
 .header__home_active{
     text-decoration:underline;
     text-underline-offset: 30px;
@@ -178,5 +173,16 @@
     margin-right: 64px;
     font-size: 18px;
     font-family: 'Roboto', cursive;
+}
+
+
+@media(max-width:760px){
+    .header__title{
+        margin-left:50px;
+    }
+}
+
+@media(max-width:640px){
+
 
 }
